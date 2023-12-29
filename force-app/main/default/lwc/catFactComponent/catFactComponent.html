@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Cat Fact" icon-name="standard:animal_and_nature">
+        <div class="slds-m-around_medium">
+            <template if:true={catFact}>
+                <p>{catFact}</p>
+            </template>
+            <template if:true={error}>
+                <p>{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
