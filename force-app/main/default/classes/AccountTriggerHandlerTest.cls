@@ -43,6 +43,9 @@ private class AccountTriggerHandlerTest {
                                                   FROM Opportunity
                                                   WHERE AccountId = :testAccount.Id];
 
+        // Call the getOpportunities method from the controller
+        List<Opportunity> gotOpportunities = AccountController.getOpportunities(testAccount.Id);
+
         System.assertEquals('Opportunity 1', createdOpportunities[0].Name);
         System.assertEquals('Prospect', createdOpportunities[0].StageName);
         System.assertEquals(Date.today(), createdOpportunities[0].CloseDate);
